@@ -1,0 +1,12 @@
+# Kokoro model weights (~340MB — over GitHub's 100MB file limit).
+# ./setup --install downloads them; or fetch manually from
+# github.com/thewh1teagle/kokoro-onnx releases (model-files-v1.0).
+runtime/models/kokoro/*.onnx
+runtime/models/kokoro/*.bin
+
+# per-machine / regenerable
+runtime/remotion/node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+_qc/

@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+# art — one entry point for the brutalist toolkit (the pared-down brutalist-art).
+#
+#   ./art --list                 list the skills
+#   ./art <skill> --help         show a skill's SKILL.md
+#   ./art todo  <reel> [flags]   per-video beat ledger (which beats need filling, how)
+#   ./art run   <reel> [flags]   compile a review cut
+#   ./art shorts <reel> [flags]  derive the 9:16 Short (cap check + auto-shorten)
+#   ./art final <reel>           clean master cut — no review label (→ <slug>-cut.mp4)
+#   ./art doctor                 dependency readiness (wraps ./setup)
+#
+# This toolkit is FREE-ONLY: Kokoro TTS (voices af_bella "Bella", am_onyx "Onyx"),
+# Manim, Remotion. No ElevenLabs, no Suno, no Higgsfield, no publishing.
+set -euo pipefail
+
+ART_HOME="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export ART_HOME
+SKILLS="$ART_HOME/skills"
+
+skill_dir() {
+  find "$SKILLS" -maxdepth 2 -type d -name "$1" | head -1
+}
+
+cmd="${1:-}"; shift || true
+
+case "$cmd" in
+  ""|-h|--help|help)
+    sed -n '2,13p' "$ART_HOME/art" | sed 's/^# \{0,1\}//'
+    ;;
+  --list|list)
+    printf '%-22s %s\n' "SKILL" "ROLE"
+    printf '%-22s %s\n' "ai-explainer"   "builder — Claude-branded explainer reel (the tight cut)"
+    printf '%-22s %s\n' "cli-explainer"  "builder — prompt → code → moving output (the build reel)"
+    printf '%-22s %s\n' "deep-explainer" "builder — 5-10 min documentary episode (vox pantry beats)"
+    printf '%-22s %s\n' "nbb"            "persona — Teardown register, Kokoro Onyx (am_onyx)"
+    printf '%-22s %s\n' "hai"            "persona — Pragmatist register, Kokoro Bella (af_bella)"
+    printf '%-22s %s\n' "explainer"      "doctrine — parent chassis the builders inherit (not an entry point)"
+    printf '%-22s %s\n' "your-turn"      "doctrine — the closing three-beat standard"
+    printf '%-22s %s\n' "duration-planner" "doctrine — duration is an output, never a target"
+    ;;
+  todo)
+    exec python3 "$ART_HOME/runtime/scripts/todo.py" "$@"
+    ;;
+  run)
+    exec bash "$ART_HOME/runtime/scripts/run.sh" "$@"
+    ;;
+  shorts)
+    exec python3 "$ART_HOME/runtime/scripts/shorts.py" "$@"
+    ;;
+  final)
+    case " $* " in
+      *" --height "*) exec python3 "$ART_HOME/runtime/scripts/compile.py" "$@" ;;
+      *)              exec python3 "$ART_HOME/runtime/scripts/compile.py" "$@" --height 2160 ;;
+    esac
+    ;;
+  doctor)
+    if [ -x "$ART_HOME/setup" ]; then exec "$ART_HOME/setup" "$@"; else
+      echo "setup script missing"; exit 1; fi
+    ;;
+  *)
+    dir="$(skill_dir "$cmd")"
+    [ -z "$dir" ] && { echo "art: unknown skill '$cmd' (try ./art --list)"; exit 2; }
+    if [ "${1:-}" = "--help" ] || [ "${1:-}" = "-h" ]; then
+      exec "${PAGER:-cat}" "$dir/SKILL.md"
+    fi
+    echo "art: '$cmd' → $dir/SKILL.md"
+    echo "This skill is agent-driven: open its SKILL.md in your CLI and follow the phases."
+    echo "Runtime scripts live in runtime/scripts/ (call via python3, or use ./art run <reel>)."
+    ;;
+esac

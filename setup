@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+# setup — the doctor for the brutalist toolkit (free-only: Kokoro + Manim + Remotion).
+#
+#   ./setup            # check everything, print the readiness table
+#   ./setup --install  # install the core Python deps + Remotion's node deps, then check
+#
+# There are NO paid features and NO API keys in this toolkit. Everything below
+# is free and local. Exit 0 if all features are ready; exit 1 otherwise.
+set -uo pipefail
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$HERE"
+
+g(){ printf '\033[32m%s\033[0m' "$1"; }
+r(){ printf '\033[31m%s\033[0m' "$1"; }
+b(){ printf '\033[1m%s\033[0m' "$1"; }
+
+have(){ command -v "$1" >/dev/null 2>&1; }
+pymod(){ python3 -c "import $1" >/dev/null 2>&1; }
+node_ge(){ have node && [ "$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null||echo 0)" -ge "$1" ]; }
+
+if [ "${1:-}" = "--install" ]; then
+  b "Installing core Python deps…"; echo
+  python3 -m pip install --break-system-packages -r requirements.txt || \
+    python3 -m pip install -r requirements.txt || true
+  echo
+  b "Installing Remotion node deps…"; echo
+  (cd runtime/remotion && npm install)
+  echo
+  if [ ! -f runtime/models/kokoro/kokoro-v1.0.onnx ] || [ ! -f runtime/models/kokoro/voices-v1.0.bin ]; then
+    b "Downloading the Kokoro voice model (~340MB, one-time, free — not in the git repo)…"; echo
+    mkdir -p runtime/models/kokoro
+    ( cd runtime/models/kokoro && \
+      curl -fLO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx && \
+      curl -fLO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin ) || \
+      echo "$(r 'model download failed — re-run ./setup --install when online')"
+  fi
+  echo; shift || true
+fi
+
+declare -A OK MISS
+check(){ if eval "$2" >/dev/null 2>&1; then OK[$1]=1; else OK[$1]=0; MISS[$1]="$3"; fi }
+check ffmpeg    'have ffmpeg && have ffprobe'   'install ffmpeg (brew install ffmpeg / apt install ffmpeg)'
+check python    'have python3'                  'install Python 3.10+'
+check node20    'node_ge 20'                    'install Node ≥ 20 (nodejs.org / nvm)'
+check latex     'have pdflatex && (have dvisvgm || have latex)' 'install LaTeX + dvisvgm (MacTeX / TeX Live) — only for Manim equation beats'
+check py_pillow 'pymod PIL'                     'pip install Pillow (slates / request cards / previz)'
+check py_manim  'pymod manim'                   'pip install "manim<0.19"'
+check py_whisper 'pymod faster_whisper'         'pip install "faster-whisper<2" (captions / word clock)'
+check py_kokoro 'pymod kokoro_onnx'             'pip install kokoro-onnx (the free voice engine)'
+check kokoro_model '[ -f runtime/models/kokoro/kokoro-v1.0.onnx ] && [ -f runtime/models/kokoro/voices-v1.0.bin ]' 'model files ship with this toolkit — if missing: curl -LO from github.com/thewh1teagle/kokoro-onnx releases (model-files-v1.0)'
+check remotion_deps '[ -d runtime/remotion/node_modules ]' 'cd runtime/remotion && npm install'
+
+FEATURES=(
+ "audio (Kokoro Bella/Onyx)|ffmpeg python py_kokoro kokoro_model"
+ "captions + word clock|ffmpeg py_whisper"
+ "Manim beats|ffmpeg py_manim py_pillow"
+ "Manim equation beats|ffmpeg py_manim latex"
+ "Remotion beats + bookends|node20 remotion_deps"
+ "slates / previz / compile|ffmpeg py_pillow"
+)
+
+echo; b "brutalist — readiness (free-only toolkit: no keys, ever)"; echo; echo
+printf '  %-28s %s\n' "FEATURE" "STATUS"
+printf '  %-28s %s\n' "-------" "------"
+fail=0
+for row in "${FEATURES[@]}"; do
+  IFS='|' read -r name reqs <<<"$row"
+  missing=""
+  for id in $reqs; do [ "${OK[$id]:-0}" = 1 ] || missing="$missing $id"; done
+  if [ -z "$missing" ]; then
+    printf '  %-28s %b\n' "$name" "$(g '✅ ready')"
+  else
+    printf '  %-28s %b\n' "$name" "$(r '❌ blocked')"; fail=1
+    for id in $missing; do echo "        · ${MISS[$id]}"; done
+  fi
+done
+echo
+[ "$fail" = 1 ] && { r "Something is blocked — see above."; echo; exit 1; }
+g "All features ready. Voices: Bella (af_bella) and Onyx (am_onyx). Cost: \$0.00, always."; echo

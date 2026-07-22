@@ -1,0 +1,8 @@
+{
+  "_comment": "Channel -> fixed slot-1 kicker (series name) + slot-2 folder chip. Enforced by beat_lint.py (hardening rule 7). Edit freely; add channels as needed. A channel not listed here is not branding-checked.",
+  "claude-liam": { "kicker": "Computational Skepticism", "chip": "@NikBearBrown" },
+  "claude":      { "kicker": "Computational Skepticism", "chip": "@NikBearBrown" },
+  "claude-medhavy": { "kicker": "Medhavy", "chip": "@MedhavyAI" },
+  "claude-hai":     { "kicker": "Irreducibly Human", "chip": "@HumanitariansAI" },
+  "claude-musinique": { "kicker": "Tools for Indie Artists", "chip": "@Musinique" }
+}
