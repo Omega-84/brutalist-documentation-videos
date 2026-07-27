@@ -1,6 +1,6 @@
 # Render Final Cuts at 4K & Upload — Contributor Guide
 
-*For Rishabh. This is the whole loop: render fast, judge, and either ship a final 4K cut to YouTube or leave notes in the video's folder. Everything here is the real toolkit as it stands — commands are copy-paste ready.*
+*For YouTube team. This is the whole loop: render fast, judge, and either ship a final 4K cut to YouTube or leave notes in the video's folder. Everything here is the real toolkit as it stands — commands are copy-paste ready.*
 
 ---
 
