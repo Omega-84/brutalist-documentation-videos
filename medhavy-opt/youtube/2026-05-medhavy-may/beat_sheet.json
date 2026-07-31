@@ -17,7 +17,7 @@
     "source": "hai_reports_weeks_1-12.md",
     "note": "Month one (May 2026). Month-as-a-whole structure, not week-by-week. Third-person, Varun named; no other non-professor names. Runtime cap 3:30. Synthetic visuals only.",
     "build": {
-      "at": "2026-07-31T00:13:16",
+      "at": "2026-07-31T14:49:45",
       "cut": "master",
       "filled": 12,
       "of": 12,
@@ -70,6 +70,10 @@
               "a working clinical-data extraction pipeline",
               "80 hours documented — in compliance"
             ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
           }
         }
       },
@@ -80,7 +84,7 @@
         "status": "VIDEO",
         "src": "media/B00.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -124,6 +128,10 @@
               "Merged to nikbearbrown/electron-microscopy."
             ],
             "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": ""
           }
         }
       },
@@ -134,7 +142,7 @@
         "status": "VIDEO",
         "src": "media/B01.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -166,6 +174,10 @@
             "title": "branch: improve-helix-prompt",
             "code": "# EM textbook — repairs\nHELIX prompt      → tutor response quality\nequation render   → fixed\nimage handling    → fixed\ncover page        → fixed\n\n# merged: 67ca037, 776e61c\n# self-contained HTML / EPUB output",
             "sparkLine": "Branch, not main."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": ""
           }
         }
       },
@@ -176,7 +188,7 @@
         "status": "VIDEO",
         "src": "media/B02.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -220,6 +232,10 @@
               "Clinical documents retrieved, parsed and LLM-formatted."
             ],
             "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": ""
           }
         }
       },
@@ -230,7 +246,7 @@
         "status": "VIDEO",
         "src": "media/B03.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -262,6 +278,10 @@
             "title": "epic fhir sandbox — extraction",
             "code": "get_patient_demographics.py → patient_demographics.csv\n\nfetch_health_data.py → six CSVs\n  problem list          labs\n  encounter diagnoses   social history\n  encounters            diagnostic reports\n\nformat_responses.py → all_responses.md",
             "sparkLine": "Six categories, six files."
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": ""
           }
         }
       },
@@ -272,7 +292,7 @@
         "status": "VIDEO",
         "src": "media/B04.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -312,6 +332,10 @@
             "resolution": "Once granted, the fixes went in as a pull request — not an informal patch.",
             "court": "Access request",
             "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": ""
           }
         }
       },
@@ -322,7 +346,7 @@
         "status": "VIDEO",
         "src": "media/B05.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -358,6 +382,10 @@
             "title": "GET /Binary/{id} → 403 Forbidden",
             "code": "# not a code defect — an authorization gap\n\nmissing scope:  system/Binary.read\nfix:            Epic developer portal → permission update\nresult:         note text retrieves clean",
             "sparkLine": "Not a bug. A scope."
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": ""
           }
         }
       },
@@ -368,7 +396,7 @@
         "status": "VIDEO",
         "src": "media/B06.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -412,6 +440,10 @@
             "resolution": "Seven populated patient records. Reported upward with a spreadsheet, not worked around.",
             "court": "Prof. Sridhar",
             "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": ""
           }
         }
       },
@@ -422,7 +454,7 @@
         "status": "VIDEO",
         "src": "media/B07.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -466,6 +498,10 @@
               "Same day: reassigned to Manim video for the physics textbook."
             ],
             "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": ""
           }
         }
       },
@@ -476,7 +512,7 @@
         "status": "VIDEO",
         "src": "media/B08.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -532,6 +568,10 @@
             "status": "In compliance",
             "caption": "",
             "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": ""
           }
         }
       },
@@ -542,7 +582,7 @@
         "status": "VIDEO",
         "src": "media/B09.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -593,7 +633,7 @@
         "status": "VIDEO",
         "src": "media/B10.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     },
     {
@@ -639,7 +679,7 @@
         "status": "VIDEO",
         "src": "media/B11.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T00:13:16"
+        "at": "2026-07-31T14:49:45"
       }
     }
   ]

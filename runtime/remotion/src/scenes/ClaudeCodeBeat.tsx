@@ -49,6 +49,18 @@ export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, spa
   // Extract the filename from the title (everything before " — " or the whole title)
   const filename = title.includes(' — ') ? title.split(' — ')[0].trim() : title;
 
+  // Size the code to the card (see the note on the <pre> below).
+  const cardH = height * (1 - 0.08 - 0.18);
+  const cardW = width * (1 - 0.14);
+  const bodyH = cardH - height * 0.045 - 56;      // minus title bar and padding
+  const bodyW = cardW - 68;                        // minus horizontal padding
+  const longest = lines.reduce((m, l) => Math.max(m, l.length), 1);
+  const codeSize = Math.min(
+    bodyH / (Math.max(lines.length, 1) * 1.72),
+    bodyW / (longest * 0.6),
+    height * 0.046,
+  );
+
   return (
     <AbsoluteFill style={{ background: CLAUDE.PAGE }}>
 
@@ -105,12 +117,18 @@ export const ClaudeCodeBeat: React.FC<ClaudeCodeBeatProps> = ({ title, code, spa
           </span>
         </div>
 
-        {/* Code lines */}
+        {/* Code lines.
+            FILL-THE-CANVAS: the type sizes to the listing rather than sitting at
+            a fixed 2.2% of frame height, which left short listings floating in a
+            half-empty card. Two ceilings keep it honest — the card's remaining
+            height after the title bar, and its width against the longest line
+            (mono advance ≈ 0.6em) — then a hard cap so a 3-line listing does not
+            become a poster. */}
         <pre style={{
           margin: 0,
-          padding: '20px 26px',
+          padding: '28px 34px',
           fontFamily: MONO,
-          fontSize: height * 0.022,
+          fontSize: codeSize,
           lineHeight: 1.72,
           textAlign: 'left',
           overflow: 'hidden',

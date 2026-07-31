@@ -55,8 +55,8 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
   const cardIn = spring({ frame, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
   const headIn = spring({ frame: frame - 8, fps, config: { damping: 28, stiffness: 140, mass: 0.8 } });
 
-  // Fill the frame: ~84% of width, capped so ultrawide stays readable.
-  const cardW = Math.min(width * 0.84, 1560);
+  // Fill the frame: ~90% of width, capped so ultrawide stays readable.
+  const cardW = Math.min(width * 0.90, 1740);
   const lines = (artifactLines ?? []).map(stripLeadNum);
 
   return (
@@ -75,20 +75,20 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
         {/* Title bar */}
         <div style={{
           background: CLAUDE.PAGE, borderBottom: `1px solid ${CLAUDE.BORDER}`,
-          padding: '22px 40px', display: 'flex', alignItems: 'center', gap: 16,
+          padding: '30px 52px', display: 'flex', alignItems: 'center', gap: 20,
         }}>
-          <Spark size={30} />
-          <span style={{ fontFamily: SERIF, fontSize: 30, color: CLAUDE.INK, fontWeight: 600 }}>
+          <Spark size={40} />
+          <span style={{ fontFamily: SERIF, fontSize: 40, color: CLAUDE.INK, fontWeight: 600 }}>
             {artifactTitle}
           </span>
         </div>
 
         {/* Artifact body */}
-        <div style={{ padding: '48px 60px 54px' }}>
+        <div style={{ padding: '62px 76px 68px' }}>
           {/* Heading */}
           <div style={{
-            fontFamily: SERIF, fontSize: 46, fontWeight: 700, color: CLAUDE.INK,
-            marginBottom: 36,
+            fontFamily: SERIF, fontSize: 68, fontWeight: 700, color: CLAUDE.INK,
+            marginBottom: 50,
             opacity: clamp(headIn, 0, 1),
           }}>
             {artifactHeading}
@@ -101,13 +101,13 @@ export const ClaudeVerdictArtifact: React.FC<ClaudeVerdictArtifactProps> = ({
             const ty = (1 - op) * 12;
             return (
               <div key={i} style={{
-                display: 'flex', alignItems: 'flex-start', gap: 22,
-                marginBottom: 26, opacity: op, transform: `translateY(${ty}px)`,
+                display: 'flex', alignItems: 'flex-start', gap: 28,
+                marginBottom: 36, opacity: op, transform: `translateY(${ty}px)`,
               }}>
-                <span style={{ fontFamily: SANS, fontSize: 28, color: CLAUDE.SPARK, flexShrink: 0, marginTop: 3, fontWeight: 700 }}>
+                <span style={{ fontFamily: SANS, fontSize: 40, color: CLAUDE.SPARK, flexShrink: 0, marginTop: 3, fontWeight: 700 }}>
                   {i + 1}.
                 </span>
-                <span style={{ fontFamily: SANS, fontSize: 28, color: CLAUDE.INK, lineHeight: 1.55 }}>
+                <span style={{ fontFamily: SANS, fontSize: 40, color: CLAUDE.INK, lineHeight: 1.5 }}>
                   {line}
                 </span>
               </div>
