@@ -10,3 +10,19 @@ __pycache__/
 *.pyc
 .DS_Store
 _qc/
+venv/
+.venv/
+
+# medhavy-opt — private source material. The weekly reports name teammates and
+# describe internal decisions; they are NOT published. SOURCES.md cites them.
+hai_reports_weeks_*.md
+
+# medhavy-opt — regenerable build artifacts. The final cut of each month IS
+# committed; per-beat renders, narration mp3s and slate cuts are rebuilt by
+#   venv/bin/python runtime/scripts/generate_audio_kokoro.py <reel>
+#   venv/bin/python runtime/scripts/remotion_scenes.py <reel>
+#   venv/bin/python runtime/scripts/compile.py <reel> --height 1080
+medhavy-opt/youtube/*/media/
+medhavy-opt/youtube/*/mp3/
+medhavy-opt/youtube/*/clips/
+medhavy-opt/youtube/*/*-slate.mp4

@@ -1,0 +1,646 @@
+{
+  "metadata": {
+    "title": "Two Fronts.",
+    "slug": "2026-05-medhavy-may",
+    "topic": "MEDHAVY · MONTH ONE",
+    "register": "Pragmatist",
+    "audience": "HAI",
+    "brand": "claude",
+    "channel_title": "@HumanitariansAI",
+    "engine": "kokoro",
+    "voice_kokoro": "am_michael",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "greeting": "Hej, HAI",
+    "source": "hai_reports_weeks_1-12.md",
+    "note": "Month one (May 2026). Month-as-a-whole structure, not week-by-week. Third-person, Varun named; no other non-professor names. Runtime cap 3:30. Synthetic visuals only.",
+    "build": {
+      "at": "2026-07-31T00:13:16",
+      "cut": "master",
+      "filled": 12,
+      "of": 12,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Month one on the Medhavy project ran two technical duties at the same time. Prompt engineering on the electron-microscopy textbook, and healthcare systems integration research against a live clinical API. Both started in the first week. Neither waited for the other.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "scene_type": "composer-ask",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "Claude composer on cream; greeting 'Hej, HAI' in serif above the field"
+          },
+          {
+            "at": "0.2",
+            "event": "the ask types itself into the composer"
+          },
+          {
+            "at": "0.6",
+            "event": "send button arms terracotta; running indicator reads 'compiling month one…'"
+          },
+          {
+            "at": "0.8",
+            "event": "three result lines land — the month's three claims"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Show me what Varun built on Medhavy in month one — the work, the findings, and the hours.",
+            "topic": "MEDHAVY · MONTH ONE",
+            "segment": "Two Fronts",
+            "greeting": "Hej, HAI",
+            "runningText": "compiling month one…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Fable 5",
+            "effortLabel": "High",
+            "placeholder": "Type / for skills",
+            "output": [
+              "two technical duties, running in parallel",
+              "a working clinical-data extraction pipeline",
+              "80 hours documented — in compliance"
+            ]
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 18.48,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "DUTY I",
+      "narration_text": "The first duty was the electron-microscopy textbook. Varun pushed prompt changes to a dedicated branch rather than straight to main, and repaired what was breaking in production: equation rendering, image handling, the cover page. That work later merged into the textbook repository as a pull request.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "topic-card",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "eyebrow sets: DUTY I — PROMPT ENGINEERING"
+          },
+          {
+            "at": "0.2",
+            "event": "title sets in the serif beneath the terracotta rule"
+          },
+          {
+            "at": "0.45",
+            "event": "thesis wipes in"
+          },
+          {
+            "at": "0.65",
+            "event": "three evidence bullets land as each is named"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptWeekMarker",
+          "props": {
+            "weeks": 0,
+            "week": 1,
+            "label": "DUTY I — PROMPT ENGINEERING",
+            "dates": "EM Textbook",
+            "thesis": "Repairs that shipped to the repository.",
+            "bullets": [
+              "HELIX prompt pushed to the improve-helix-prompt branch.",
+              "Equation rendering, image handling and cover page fixed.",
+              "Merged to nikbearbrown/electron-microscopy."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 20.4,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "DUTY I",
+      "narration_text": "Changing a prompt an entire textbook's tutor depends on is not a small edit, which is why it went to its own branch. The rendering repairs were the visible half: equations failing to typeset, image paths resolving wrong, a cover that would not build into the self-contained output.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "code-artifact",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "artifact card titled improve-helix-prompt fades up"
+          },
+          {
+            "at": "0.35",
+            "event": "the repair lines set in mono, one per fix"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line lands: 'Branch, not main.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "branch: improve-helix-prompt",
+            "code": "# EM textbook — repairs\nHELIX prompt      → tutor response quality\nequation render   → fixed\nimage handling    → fixed\ncover page        → fixed\n\n# merged: 67ca037, 776e61c\n# self-contained HTML / EPUB output",
+            "sparkLine": "Branch, not main."
+          }
+        }
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 18.98,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "DUTY II",
+      "narration_text": "The second duty was healthcare systems integration research, run against Epic's FHIR sandbox. Not a tutorial environment — a real API with real authentication. Varun built the extraction end to end: test patient identifiers, the bulk group identifier, and nested demographic records flattened into something analysable.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "topic-card",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "eyebrow sets: DUTY II — HEALTHCARE INTEGRATION"
+          },
+          {
+            "at": "0.2",
+            "event": "title sets in the serif"
+          },
+          {
+            "at": "0.45",
+            "event": "thesis wipes in"
+          },
+          {
+            "at": "0.65",
+            "event": "bullets land as spoken"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptWeekMarker",
+          "props": {
+            "weeks": 0,
+            "week": 1,
+            "label": "DUTY II — HEALTHCARE INTEGRATION",
+            "dates": "Epic FHIR Sandbox",
+            "thesis": "A working clinical-data extraction pipeline.",
+            "bullets": [
+              "Test patient IDs and the Bulk FHIR Group ID extracted.",
+              "Nested FHIR demographics flattened to CSV.",
+              "Clinical documents retrieved, parsed and LLM-formatted."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 23.54,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "DUTY II",
+      "narration_text": "Two scripts carry the pipeline. The first flattens nested demographic structures into a single file. The second pulls six clinical categories into six: problems, encounter diagnoses, labs, social history, encounters, diagnostic reports.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "code-artifact",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "code card fades up; the two filenames set in mono"
+          },
+          {
+            "at": "0.4",
+            "event": "the six clinical categories list down the card as they are named"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line lands: 'Six categories, six files.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "epic fhir sandbox — extraction",
+            "code": "get_patient_demographics.py → patient_demographics.csv\n\nfetch_health_data.py → six CSVs\n  problem list          labs\n  encounter diagnoses   social history\n  encounters            diagnostic reports\n\nformat_responses.py → all_responses.md",
+            "sparkLine": "Six categories, six files."
+          }
+        }
+      },
+      "estimated_duration_s": 14,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 17.9,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "FRICTION",
+      "narration_text": "One piece of friction is worth naming. The repository access needed to open that pull request took a week to become usable — the invite had been sent, and sat unread. Once open, the fixes went in as a proper pull request.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "blocker",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heavy ink rule draws; ground shifts to the friction register"
+          },
+          {
+            "at": "0.2",
+            "event": "label sets: 'Repository access'"
+          },
+          {
+            "at": "0.45",
+            "event": "'Requested May 7' and 'Open May 14' anchor the span; bar fills terracotta as days run to 7"
+          },
+          {
+            "at": "0.8",
+            "event": "resolution line wipes in — merged as a pull request"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptBlockerCard",
+          "props": {
+            "label": "Repository access",
+            "opened": "Requested May 7",
+            "closed": "Open May 14",
+            "days": 7,
+            "resolution": "Once granted, the fixes went in as a pull request — not an informal patch.",
+            "court": "Access request",
+            "folderLabel": "@HumanitariansAI"
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 15.36,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "DUTY II",
+      "narration_text": "Retrieving the note text returned a four-oh-three Forbidden. The move that matters is not retry logic — it is reading what the server is refusing. A missing OAuth scope, system slash Binary dot read, resolved through the developer portal. Not a defect. A permission the token never had.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "code-artifact",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "the 403 response line sits alone at the top of the card"
+          },
+          {
+            "at": "0.4",
+            "event": "diagnosis lines type beneath it"
+          },
+          {
+            "at": "0.75",
+            "event": "the missing scope highlights terracotta as it is spoken"
+          },
+          {
+            "at": "0.9",
+            "event": "spark line lands: 'Not a bug. A scope.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "GET /Binary/{id} → 403 Forbidden",
+            "code": "# not a code defect — an authorization gap\n\nmissing scope:  system/Binary.read\nfix:            Epic developer portal → permission update\nresult:         note text retrieves clean",
+            "sparkLine": "Not a bug. A scope."
+          }
+        }
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 20.45,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "FINDING",
+      "narration_text": "Then the finding that mattered more than the fix. Across the whole sandbox, seven patient records were populated, and sparsely. That is not enough to build research on. Varun reported it in writing to Prof. Sridhar, with a summarised spreadsheet of the sandbox API and an offer to explore further endpoints.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "blocker",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heavy ink rule draws across the top; ground shifts to the finding register"
+          },
+          {
+            "at": "0.2",
+            "event": "label sets: 'Sandbox data sparsity'"
+          },
+          {
+            "at": "0.45",
+            "event": "'Flagged May 15' anchors the span; the bar fills terracotta"
+          },
+          {
+            "at": "0.7",
+            "event": "'Reported to: Prof. Sridhar' sets beneath"
+          },
+          {
+            "at": "0.85",
+            "event": "resolution line wipes in — seven populated records, escalated with evidence"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptBlockerCard",
+          "props": {
+            "label": "Sandbox data sparsity",
+            "opened": "Flagged May 15",
+            "closed": "Escalated with evidence",
+            "days": 7,
+            "resolution": "Seven populated patient records. Reported upward with a spreadsheet, not worked around.",
+            "court": "Prof. Sridhar",
+            "folderLabel": "@HumanitariansAI"
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 20.95,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "DECISION",
+      "narration_text": "Prof. Sridhar ended the Epic integration workstream, citing accumulated blockers — sparse data, authorization friction, an unclear access model. Every one of them already documented from Varun's side. The same day brought a new assignment: Manim instructional video for the physics mechanics textbook, with access requested that day.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "topic-card",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "eyebrow sets: THE DECISION — MAY 28"
+          },
+          {
+            "at": "0.2",
+            "event": "title sets in the serif"
+          },
+          {
+            "at": "0.4",
+            "event": "thesis wipes in — the decision rested on his own documentation"
+          },
+          {
+            "at": "0.65",
+            "event": "three bullets land: the call, the reassignment, the same-day request"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptWeekMarker",
+          "props": {
+            "weeks": 0,
+            "week": 1,
+            "label": "THE DECISION — MAY 28",
+            "dates": "Workstream closed",
+            "thesis": "Decided on evidence Varun had already filed.",
+            "bullets": [
+              "Prof. Sridhar ends the EPIC integration workstream as infeasible.",
+              "Cited blockers match those documented in the weekly reports.",
+              "Same day: reassigned to Manim video for the physics textbook."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          }
+        }
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 22.85,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "HOURS",
+      "narration_text": "Four weeks, twenty hours documented in each. Eighty hours for the month. Status: in compliance.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "hours-ledger",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heading sets: DOCUMENTED HOURS — MONTH ONE"
+          },
+          {
+            "at": "0.15",
+            "event": "each week's row rules in and its numeral counts up to 20"
+          },
+          {
+            "at": "0.6",
+            "event": "the terracotta total counts up to 80"
+          },
+          {
+            "at": "0.85",
+            "event": "the compliance status lands with its terracotta dot"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptHoursCard",
+          "props": {
+            "heading": "Documented hours — Month one",
+            "rows": [
+              {
+                "label": "Week 1 · May 1–7",
+                "hours": 20
+              },
+              {
+                "label": "Week 2 · May 8–14",
+                "hours": 20
+              },
+              {
+                "label": "Week 3 · May 15–21",
+                "hours": 20
+              },
+              {
+                "label": "Week 4 · May 22–28",
+                "hours": 20
+              }
+            ],
+            "total": 80,
+            "status": "In compliance",
+            "caption": "",
+            "folderLabel": "@HumanitariansAI"
+          }
+        }
+      },
+      "estimated_duration_s": 7,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 6.89,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "VERDICT",
+      "narration_text": "Month one, then. Two technical duties in parallel from the first week. Textbook repairs merged to the repository. A clinical-data pipeline built end to end against a live API, including a real authorization fix. And a data limitation found, evidenced, and escalated.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "verdict",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "artifact page rises on cream, titled 'Month one'"
+          },
+          {
+            "at": "0.25",
+            "event": "each line lands as it is spoken, numbered by the card"
+          },
+          {
+            "at": "0.9",
+            "event": "the fourth line holds"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Month one",
+            "artifactHeading": "May 2026 — Medhavy",
+            "artifactLines": [
+              "Two technical duties ran in parallel from week one.",
+              "Textbook repairs merged: equations, images, cover, self-contained output.",
+              "Epic FHIR pipeline built: demographics, six clinical categories, clinical documents.",
+              "A 403 diagnosed to a missing OAuth scope — and a data limitation escalated with evidence."
+            ]
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 18,
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 19.82,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "OUTRO",
+      "narration_text": "Two Fronts. Medhavy, month one.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "scene_type": "title-outro",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title fades up poster-style in the serif, terracotta period"
+          },
+          {
+            "at": "0.5",
+            "event": "handle sets beneath: @HumanitariansAI"
+          },
+          {
+            "at": "0.7",
+            "event": "subline holds: Medhavy · Month one"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Two Fronts.",
+            "handle": "@HumanitariansAI",
+            "subline": "Medhavy · Month one"
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 4,
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 2.4,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:13:16"
+      }
+    }
+  ]
+}

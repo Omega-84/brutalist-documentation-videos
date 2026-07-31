@@ -30,6 +30,9 @@ import {MusiniqueArsenal, musiniqueArsenalSchema} from './scenes/MusiniqueArsena
 import {ClaudeVerdictArtifact, claudeVerdictArtifactSchema} from './scenes/ClaudeVerdictArtifact';
 import {ClaudeVerdictArtifact916, claudeVerdictArtifact916Schema} from './scenes/ClaudeVerdictArtifact916';
 import {ClaudeTitleOutro, claudeTitleOutroSchema} from './scenes/ClaudeTitleOutro';
+import {OptWeekMarker, optWeekMarkerSchema} from './scenes/OptWeekMarker';
+import {OptHoursCard, optHoursCardSchema} from './scenes/OptHoursCard';
+import {OptBlockerCard, optBlockerCardSchema} from './scenes/OptBlockerCard';
 // claude-liam — adaptive-therapy-revolution
 import {ClaudeCodeBeat, claudeCodeBeatSchema} from './scenes/ClaudeCodeBeat';
 import {ClaudeWindow, claudeWindowSchema} from './scenes/ClaudeWindow';
@@ -1302,6 +1305,47 @@ export const RemotionRoot: React.FC = () => {
           title: 'Claude, In Your Corner.',
           handle: '@Musinique',
           subline: 'bot vs bot, season one',
+        }} />
+      {/* ── medhavy-opt — OPT monthly recaps ── */}
+      <Composition id="OptWeekMarker" component={OptWeekMarker}
+        durationInFrames={600} fps={30} width={1920} height={1080}
+        schema={optWeekMarkerSchema}
+        defaultProps={{
+          week: 2, weeks: 4, dates: 'May 8–14, 2026',
+          thesis: 'The first working clinical-data pipeline.',
+          bullets: [
+            'Extracted test patient IDs and the Bulk FHIR Group ID.',
+            'get_patient_demographics.py → patient_demographics.csv',
+            'Six clinical categories, each to its own CSV.',
+          ],
+          folderLabel: '@HumanitariansAI',
+        }} />
+      <Composition id="OptHoursCard" component={OptHoursCard}
+        durationInFrames={600} fps={30} width={1920} height={1080}
+        schema={optHoursCardSchema}
+        defaultProps={{
+          heading: 'Documented hours — May 2026',
+          rows: [
+            { label: 'Week 1 · May 1–7', hours: 20 },
+            { label: 'Week 2 · May 8–14', hours: 20 },
+            { label: 'Week 3 · May 15–21', hours: 20 },
+            { label: 'Week 4 · May 22–28', hours: 20 },
+          ],
+          total: 80,
+          caption: 'Every week meets the 20-hour OPT floor. Breakdowns are reconstructed from task descriptions, not session-logged.',
+          folderLabel: '@HumanitariansAI',
+        }} />
+      <Composition id="OptBlockerCard" component={OptBlockerCard}
+        durationInFrames={600} fps={30} width={1920} height={1080}
+        schema={optBlockerCardSchema}
+        defaultProps={{
+          label: 'Repo access',
+          opened: 'Requested May 7',
+          closed: 'Resolved May 14',
+          days: 7,
+          resolution: 'The invite was sent May 11. It was unread.',
+          court: "Varun's inbox",
+          folderLabel: '@HumanitariansAI',
         }} />
       {/* claude-liam — adaptive-therapy-revolution */}
       <Composition id="ClaudeCodeBeat" component={ClaudeCodeBeat}

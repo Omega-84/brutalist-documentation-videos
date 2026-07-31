@@ -1,0 +1,164 @@
+{
+ "ClaudeCodeBeat": [
+  {
+   "beat": "B02",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B04",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B07",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B02",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B04",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B06",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B02",
+   "video": "2026-07-medhavy-july"
+  }
+ ],
+ "ClaudeComposerAsk": [
+  {
+   "beat": "B00",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B12",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B00",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B00",
+   "video": "2026-07-medhavy-july"
+  }
+ ],
+ "ClaudeTitleOutro": [
+  {
+   "beat": "B13",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B11",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B11",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B08",
+   "video": "2026-07-medhavy-july"
+  }
+ ],
+ "ClaudeVerdictArtifact": [
+  {
+   "beat": "B11",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B10",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B10",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B07",
+   "video": "2026-07-medhavy-july"
+  }
+ ],
+ "OptBlockerCard": [
+  {
+   "beat": "B05",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B08",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B08",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B04",
+   "video": "2026-07-medhavy-july"
+  }
+ ],
+ "OptHoursCard": [
+  {
+   "beat": "B10",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B09",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B06",
+   "video": "2026-07-medhavy-july"
+  }
+ ],
+ "OptWeekMarker": [
+  {
+   "beat": "B01",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B03",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B06",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B09",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B01",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B03",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B05",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B07",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B01",
+   "video": "2026-07-medhavy-july"
+  },
+  {
+   "beat": "B03",
+   "video": "2026-07-medhavy-july"
+  },
+  {
+   "beat": "B05",
+   "video": "2026-07-medhavy-july"
+  }
+ ]
+}

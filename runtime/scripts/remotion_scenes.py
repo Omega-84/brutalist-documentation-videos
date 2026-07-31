@@ -79,12 +79,14 @@ def render_beat(folder: Path, beat: dict, force: bool) -> str:
     with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as f:
         json.dump(rem.get("props", {}), f)
         props_path = f.name
-    # --scale=2 renders the 1920x1080 comps at true 3840x2160 (supersampled text).
+    # --scale=2 renders the 1920x1080 comps at true 3840x2160 (supersampled text);
+    # --scale=1 renders native 1080p and is ~4x faster. Override with $ART_SCALE.
     # --image-format=png removes Remotion's default JPEG-q80 frame step (the hidden
     # quality ceiling on flat brand color + text). --crf=16 for a clean master.
+    scale = os.environ.get("ART_SCALE", "2")
     cmd = ["npx", "remotion", "render", ENTRY, pattern, str(out.resolve()),
            f"--props={props_path}", "--concurrency=1",
-           "--scale=2", "--image-format=png", "--crf=16"] + browser_flags()
+           f"--scale={scale}", "--image-format=png", "--crf=16"] + browser_flags()
     r = subprocess.run(cmd, cwd=PROJECT, capture_output=True, text=True)
     os.unlink(props_path)
     if r.returncode != 0:

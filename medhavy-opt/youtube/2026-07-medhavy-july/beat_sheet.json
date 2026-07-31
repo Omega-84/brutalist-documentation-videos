@@ -1,0 +1,532 @@
+{
+  "metadata": {
+    "title": "Scoped, Then Rebuilt.",
+    "slug": "2026-07-medhavy-july",
+    "topic": "MEDHAVY · MONTH THREE",
+    "register": "Pragmatist",
+    "audience": "HAI",
+    "brand": "claude",
+    "channel_title": "@HumanitariansAI",
+    "engine": "kokoro",
+    "voice_kokoro": "am_michael",
+    "palette": "claude",
+    "style_preset": "claude",
+    "ground": "#FAF9F5",
+    "aspect_ratio": "16:9",
+    "greeting": "Hola, HAI",
+    "source": "hai_reports_weeks_1-12.md",
+    "note": "Month three (July 2026, Weeks 10-12, Jul 3-23). Month-as-a-whole structure. Nothing after Jul 23 is referenced anywhere. Third-person, Varun named; no other non-professor names.",
+    "build": {
+      "at": "2026-07-31T00:15:29",
+      "cut": "master",
+      "filled": 9,
+      "of": 9,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "ASK",
+      "narration_text": "Month three was defined by judgement rather than volume. A dependency outside Varun's control stayed unresolved, so effort moved to what was controllable: throughput, scope, and then a full change of visual direction — delivered as samples for review.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "type-on",
+        "scene_type": "composer-ask",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "Claude composer on cream; greeting 'Hola, HAI' in serif"
+          },
+          {
+            "at": "0.2",
+            "event": "the ask types itself into the composer"
+          },
+          {
+            "at": "0.6",
+            "event": "send arms terracotta; running indicator reads 'compiling month three…'"
+          },
+          {
+            "at": "0.8",
+            "event": "three result lines land"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Show me what Varun built on Medhavy in month three — throughput, scope, and the new direction.",
+            "topic": "MEDHAVY · MONTH THREE",
+            "segment": "Scoped, Then Rebuilt",
+            "greeting": "Hola, HAI",
+            "runningText": "compiling month three…",
+            "folderLabel": "@HumanitariansAI",
+            "modelLabel": "Fable 5",
+            "effortLabel": "High",
+            "placeholder": "Type / for skills",
+            "output": [
+              "batch production, chained renders",
+              "twelve planned topics pruned to four",
+              "60 hours documented — in compliance"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 17,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 17.57,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:15:29"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "ADAPTING",
+      "narration_text": "The narration dependency was still unresolved and still outside his control. Rather than stall on it or burn hours attempting a workaround, Varun redirected effort to production throughput — building the first four chapters in batch and chaining the render commands so a full set could be produced in one pass.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "topic-card",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "eyebrow sets: ADAPTING — PRODUCTION THROUGHPUT"
+          },
+          {
+            "at": "0.2",
+            "event": "title sets in the serif beneath the terracotta rule"
+          },
+          {
+            "at": "0.45",
+            "event": "thesis wipes in"
+          },
+          {
+            "at": "0.65",
+            "event": "three bullets land as named"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptWeekMarker",
+          "props": {
+            "weeks": 0,
+            "week": 1,
+            "label": "ADAPTING — PRODUCTION THROUGHPUT",
+            "dates": "Blocked upstream, moving anyway",
+            "thesis": "Find the controllable lever.",
+            "bullets": [
+              "First four chapters built in batch.",
+              "Render commands chained into a single pass.",
+              "Effort redirected rather than stalled."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 20.16,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:15:29"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "ADAPTING",
+      "narration_text": "Chaining the renders is a small change with a real effect. Instead of supervising each build and starting the next by hand, one command produces the set. When a style change arrives later and everything has to be rebuilt, that difference is what makes rebuilding cheap enough to actually do.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "code-artifact",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "the per-scene invocation sits at the top of the card"
+          },
+          {
+            "at": "0.45",
+            "event": "the chained form types in beneath it"
+          },
+          {
+            "at": "0.85",
+            "event": "spark line lands: 'One pass, four chapters.'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "batch production",
+            "code": "# before — one scene at a time, supervised\nrender ch01 ; wait ; render ch02 ; wait ...\n\n# after — chained, single pass\nrender ch01 && render ch02 && render ch03 && render ch04\n\n# rebuild cost drops → a style pivot stays affordable",
+            "sparkLine": "One pass, four chapters."
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.18,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:15:29"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "EDITORIAL",
+      "narration_text": "The second decision was subtractive. The original plan covered twelve topics. Varun pruned it to four — the ones that genuinely benefit from animation. That follows the professor's explicit instruction to visualise only what warrants it, and it is the harder call, because cutting eight planned deliverables looks like less work while being the correct one.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "topic-card",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "eyebrow sets: EDITORIAL JUDGEMENT"
+          },
+          {
+            "at": "0.2",
+            "event": "'Twelve topics' sets large in the serif"
+          },
+          {
+            "at": "0.5",
+            "event": "eight strike through as the pruning is named; four remain in terracotta"
+          },
+          {
+            "at": "0.75",
+            "event": "thesis and bullets land"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptWeekMarker",
+          "props": {
+            "weeks": 0,
+            "week": 1,
+            "label": "EDITORIAL JUDGEMENT",
+            "dates": "Twelve topics → four",
+            "thesis": "Animate only what warrants animation.",
+            "bullets": [
+              "Scripts reviewed against the professor's scoping instruction.",
+              "Eight topics cut; four retained for production.",
+              "Fewer deliverables, deliberately."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 25,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 22.46,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:15:29"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "DEPENDENCY",
+      "narration_text": "The narration credential is worth restating plainly, because it spans two months. It was diagnosed as an inactive key, reported to the people who administer the account, and never silently absorbed into the schedule. Work continued around it; the dependency itself simply was not Varun's to close.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "blocker",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heavy ink rule draws; ground shifts to the dependency register"
+          },
+          {
+            "at": "0.2",
+            "event": "label sets: 'Narration credential'"
+          },
+          {
+            "at": "0.5",
+            "event": "span bar fills terracotta across the two-month span"
+          },
+          {
+            "at": "0.75",
+            "event": "'Ball in: account administrator' sets beneath"
+          },
+          {
+            "at": "0.88",
+            "event": "resolution line wipes in — reported, not absorbed"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptBlockerCard",
+          "props": {
+            "label": "Narration credential",
+            "opened": "Reported in month two",
+            "closed": "Outside his control",
+            "days": 14,
+            "resolution": "Diagnosed, reported, and worked around — never silently absorbed.",
+            "court": "Account administrator",
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 22,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 20.18,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:15:29"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "NEW DIRECTION",
+      "narration_text": "Then the direction changed again. Prof. Nik introduced a new production tool and a distinct visual style — a creative call, not a correction. Varun onboarded onto the tool, scoped what the style shift meant technically, and delivered three sample videos in the new style to Prof. Sridhar for review.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "topic-card",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "eyebrow sets: NEW DIRECTION — JULY"
+          },
+          {
+            "at": "0.2",
+            "event": "title sets in the serif"
+          },
+          {
+            "at": "0.45",
+            "event": "thesis wipes in — a creative call, not a correction"
+          },
+          {
+            "at": "0.7",
+            "event": "three bullets land, ending on the three samples submitted"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptWeekMarker",
+          "props": {
+            "weeks": 0,
+            "week": 1,
+            "label": "NEW DIRECTION — JULY",
+            "dates": "New tool, new visual style",
+            "thesis": "A creative-direction change, absorbed and delivered.",
+            "bullets": [
+              "Prof. Nik introduced a new production tool and visual direction.",
+              "Style shift scoped technically before rebuilding.",
+              "Three sample videos delivered to Prof. Sridhar for review."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 23,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 19.7,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:15:29"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "HOURS",
+      "narration_text": "Three weeks, twenty hours documented in each. Sixty hours for the month. Status: in compliance.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "hours-ledger",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "heading sets: DOCUMENTED HOURS — MONTH THREE"
+          },
+          {
+            "at": "0.2",
+            "event": "each week's row rules in and its numeral counts to 20"
+          },
+          {
+            "at": "0.6",
+            "event": "the terracotta total counts up to 60"
+          },
+          {
+            "at": "0.85",
+            "event": "the compliance status lands with its terracotta dot"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptHoursCard",
+          "props": {
+            "heading": "Documented hours — Month three",
+            "rows": [
+              {
+                "label": "Week 10 · Jul 3–9",
+                "hours": 20
+              },
+              {
+                "label": "Week 11 · Jul 10–16",
+                "hours": 20
+              },
+              {
+                "label": "Week 12 · Jul 17–23",
+                "hours": 20
+              }
+            ],
+            "total": 60,
+            "status": "In compliance",
+            "caption": "",
+            "folderLabel": "@HumanitariansAI"
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 9,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 6.86,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:15:29"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERDICT",
+      "narration_text": "Month three, then. An upstream dependency handled without stalling. Production batched and chained so rebuilds stay cheap. Twelve planned topics cut to the four that warrant animation. A new tool and a new visual language absorbed inside a fortnight. And three samples delivered for review.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "verdict",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "artifact page rises on cream, titled 'Month three'"
+          },
+          {
+            "at": "0.25",
+            "event": "each line lands as spoken"
+          },
+          {
+            "at": "0.9",
+            "event": "the final line holds"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Month three",
+            "artifactHeading": "July 2026 — Medhavy",
+            "artifactLines": [
+              "An upstream dependency reported and worked around, not stalled on.",
+              "Batch production with chained renders — rebuild cost driven down.",
+              "Twelve planned topics pruned to the four that warrant animation.",
+              "A new tool and visual direction absorbed; three samples delivered for review."
+            ]
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 21,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 19.63,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:15:29"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "OUTRO",
+      "narration_text": "Scoped, Then Rebuilt. Medhavy, month three.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "fade",
+        "scene_type": "title-outro",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "title fades up poster-style in the serif, terracotta period"
+          },
+          {
+            "at": "0.5",
+            "event": "handle sets beneath: @HumanitariansAI"
+          },
+          {
+            "at": "0.7",
+            "event": "subline holds: Medhavy · Month three"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Scoped, Then Rebuilt.",
+            "handle": "@HumanitariansAI",
+            "subline": "Medhavy · Month three"
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 6,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 3.02,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T00:15:29"
+      }
+    }
+  ]
+}

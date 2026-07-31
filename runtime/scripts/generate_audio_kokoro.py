@@ -3,9 +3,10 @@
 generate_audio_kokoro.py — the ONLY voice engine in the brutalist toolkit
 (Kokoro-82M via kokoro-onnx — free, local, Apache-2.0, no API, no meter).
 
-THE HOUSE VOICES — exactly two, both Kokoro:
-  am_onyx   "Onyx"  — the nbb persona / Liam-in-for-Bear default
-  af_bella  "Bella" — the hai persona default
+THE HOUSE VOICES — all Kokoro:
+  am_onyx    "Onyx"    — the nbb persona / Liam-in-for-Bear default
+  af_bella   "Bella"   — the hai persona default
+  am_michael "Michael" — the Medhavy OPT monthly recaps (added 2026-07-30)
 Any other voice code is rejected. There is no ElevenLabs, no Suno, no paid
 engine anywhere in this toolkit.
 
@@ -16,8 +17,8 @@ THE INTERFACE IS THE HOUSE INTERFACE:
 Durations are GROUND TRUTH for all downstream timing.
 
 VOICE SELECTION:
-  - beat["voice"] = "af_bella" | "am_onyx"  → that voice for that beat
-  - metadata["voice_kokoro"]                → folder default (else am_onyx)
+  - beat["voice"] = "af_bella" | "am_onyx" | "am_michael"  → that voice, that beat
+  - metadata["voice_kokoro"]                               → folder default (else am_onyx)
 
 MODEL FILES (one-time, ~330MB total, no account needed):
   $ART_HOME/runtime/models/kokoro/kokoro-v1.0.onnx
@@ -48,7 +49,10 @@ from pathlib import Path
 FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
 FFPROBE = shutil.which("ffprobe") or "ffprobe"
 DEFAULT_VOICE = "am_onyx"    # Onyx — the house default (nbb / Liam-in-for-Bear)
-ALLOWED_VOICES = {"am_onyx", "af_bella"}   # the only two voices in this toolkit
+# am_michael added 2026-07-30 for the Medhavy OPT monthly recaps (user-directed).
+# Still Kokoro-only and still free — voices-v1.0.bin already contains all 54
+# voices; this allowlist is the only thing that gates them.
+ALLOWED_VOICES = {"am_onyx", "af_bella", "am_michael"}
 
 # Math/symbol → spoken form. Applied as a safety net even if the beat sheet
 # already carries tts_normalized_text. (Inlined from the old generate_audio.py.)
