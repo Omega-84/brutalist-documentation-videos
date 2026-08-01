@@ -171,7 +171,10 @@ def main():
     todo = []
     for b in sheet["beats"]:
         bid = b["beat_id"]
-        text = (b.get("narration_text") or "").strip()
+        # tts_text overrides narration_text for SPEECH ONLY — phonetic
+        # respellings of names the G2P gets wrong. narration_text stays the
+        # written record (PEDAGOGY.md, captions, review).
+        text = (b.get("tts_text") or b.get("narration_text") or "").strip()
         if not text:
             continue
         if a.only is not None and bid not in a.only:

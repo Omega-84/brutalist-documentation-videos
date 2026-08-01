@@ -107,6 +107,10 @@
   {
    "beat": "B07",
    "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B05",
+   "video": "2026-07-medhavy-july"
   }
  ],
  "OptHoursCard": [
@@ -125,6 +129,20 @@
   {
    "beat": "B09",
    "video": "2026-05-medhavy-may"
+  }
+ ],
+ "OptIntroCard": [
+  {
+   "beat": "B01",
+   "video": "2026-05-medhavy-may"
+  },
+  {
+   "beat": "B01",
+   "video": "2026-06-medhavy-june"
+  },
+  {
+   "beat": "B01",
+   "video": "2026-07-medhavy-july"
   }
  ],
  "OptWeekMarker": [

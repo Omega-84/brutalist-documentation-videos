@@ -33,6 +33,7 @@ import {ClaudeTitleOutro, claudeTitleOutroSchema} from './scenes/ClaudeTitleOutr
 import {OptWeekMarker, optWeekMarkerSchema} from './scenes/OptWeekMarker';
 import {OptHoursCard, optHoursCardSchema} from './scenes/OptHoursCard';
 import {OptBlockerCard, optBlockerCardSchema} from './scenes/OptBlockerCard';
+import {OptIntroCard, optIntroCardSchema} from './scenes/OptIntroCard';
 // claude-liam — adaptive-therapy-revolution
 import {ClaudeCodeBeat, claudeCodeBeatSchema} from './scenes/ClaudeCodeBeat';
 import {ClaudeWindow, claudeWindowSchema} from './scenes/ClaudeWindow';
@@ -1345,6 +1346,20 @@ export const RemotionRoot: React.FC = () => {
           days: 7,
           resolution: 'The invite was sent May 11. It was unread.',
           court: "Varun's inbox",
+          folderLabel: '@HumanitariansAI',
+        }} />
+      <Composition id="OptIntroCard" component={OptIntroCard}
+        durationInFrames={600} fps={30} width={1920} height={1080}
+        schema={optIntroCardSchema}
+        defaultProps={{
+          name: 'Varun Nayyar',
+          role: 'Volunteer · Medhavy · Humanitarians AI',
+          month: 'Month one — May 2026',
+          summary: [
+            'Two technical duties, running in parallel from week one.',
+            'A clinical-data extraction pipeline built against a live hospital API.',
+            '80 hours documented — in compliance.',
+          ],
           folderLabel: '@HumanitariansAI',
         }} />
       {/* claude-liam — adaptive-therapy-revolution */}

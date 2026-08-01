@@ -15,12 +15,12 @@
     "aspect_ratio": "16:9",
     "greeting": "Hola, HAI",
     "source": "hai_reports_weeks_1-12.md",
-    "note": "Month three (July 2026, Weeks 10-12, Jul 3-23). Month-as-a-whole structure. Nothing after Jul 23 is referenced anywhere. Third-person, Varun named; no other non-professor names.",
+    "note": "Month three (July 2026, Weeks 10-12, Jul 3-23). Month-as-a-whole structure. Nothing after Jul 23 is referenced anywhere. First person (reviewer request). Executive summary at beat two (B01), per reviewer. No non-professor names.",
     "build": {
-      "at": "2026-07-31T14:54:22",
+      "at": "2026-07-31T22:04:24",
       "cut": "master",
-      "filled": 9,
-      "of": 9,
+      "filled": 10,
+      "of": 10,
       "slates": [],
       "skin_warnings": []
     }
@@ -29,7 +29,7 @@
     {
       "beat_id": "B00",
       "act": "ASK",
-      "narration_text": "Month three was defined by judgement rather than volume. A dependency outside Varun's control stayed unresolved, so effort moved to what was controllable: throughput, scope, and then a full change of visual direction — delivered as samples for review.",
+      "narration_text": "Month three was defined by judgement rather than volume. A dependency outside my control stayed unresolved, so effort moved to what was controllable: throughput, scope, and then a full change of visual direction — delivered as samples for review.",
       "shot": {
         "type": "GRAPHIC",
         "source": "remotion",
@@ -56,7 +56,7 @@
         "remotion": {
           "pattern": "ClaudeComposerAsk",
           "props": {
-            "command": "Show me what Varun built on Medhavy in month three — throughput, scope, and the new direction.",
+            "command": "Show me what I built on Medhavy in month three — throughput, scope, and the new direction.",
             "topic": "MEDHAVY · MONTH THREE",
             "segment": "Scoped, Then Rebuilt",
             "greeting": "Hola, HAI",
@@ -70,27 +70,80 @@
               "twelve planned topics pruned to four",
               "60 hours documented — in compliance"
             ]
-          },
-          "rendered": {
-            "out": "media/B00.mp4",
-            "at": ""
           }
         }
       },
       "estimated_duration_s": 17,
       "audio_file": "mp3/beat-B00.mp3",
-      "actual_duration_s": 17.57,
+      "actual_duration_s": 21.79,
       "build": {
         "status": "VIDEO",
         "src": "media/B00.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T14:54:22"
+        "at": "2026-07-31T22:04:24"
       }
     },
     {
       "beat_id": "B01",
+      "act": "SUMMARY",
+      "narration_text": "Hi, I'm Varun Nayyar. I volunteer on the Medhavy project at Humanitarians AI. This video covers my third month, July twenty twenty-six: adapting around a blocked dependency, cutting twelve planned topics down to four, and delivering samples in a new visual direction. Sixty hours documented.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "remotion",
+        "motion": "reveal",
+        "scene_type": "intro-card",
+        "show": [
+          {
+            "at": "0.0",
+            "event": "spark and EXECUTIVE SUMMARY set at the top"
+          },
+          {
+            "at": "0.15",
+            "event": "name sets large in the serif as it is spoken"
+          },
+          {
+            "at": "0.3",
+            "event": "role line and terracotta rule land beneath"
+          },
+          {
+            "at": "0.5",
+            "event": "the month sets"
+          },
+          {
+            "at": "0.7",
+            "event": "three summary lines land one at a time"
+          }
+        ],
+        "remotion": {
+          "pattern": "OptIntroCard",
+          "props": {
+            "name": "Varun Nayyar",
+            "role": "Volunteer · Medhavy · Humanitarians AI",
+            "month": "Month three — July 2026",
+            "summary": [
+              "Work redirected around a dependency I could not close.",
+              "Twelve planned topics pruned to the four that warrant animation.",
+              "60 hours documented — in compliance."
+            ],
+            "folderLabel": "@HumanitariansAI"
+          }
+        }
+      },
+      "estimated_duration_s": 20,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 17.04,
+      "tts_text": "Hi, I'm Vuh-roon Nigh-yar. I volunteer on the Medhavy project at Humanitarians AI. This video covers my third month, July twenty twenty-six: adapting around a blocked dependency, cutting twelve planned topics down to four, and delivering samples in a new visual direction. Sixty hours documented.",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-07-31T22:04:24"
+      }
+    },
+    {
+      "beat_id": "B02",
       "act": "ADAPTING",
-      "narration_text": "The narration dependency was still unresolved and still outside his control. Rather than stall on it or burn hours attempting a workaround, Varun redirected effort to production throughput — building the first four chapters in batch and chaining the render commands so a full set could be produced in one pass.",
+      "narration_text": "The narration dependency was still unresolved and still outside my control. Rather than stall on it or burn hours attempting a workaround, I redirected effort to production throughput — building the first four chapters in batch and chaining the render commands so a full set could be produced in one pass.",
       "shot": {
         "type": "GRAPHIC",
         "source": "remotion",
@@ -128,25 +181,21 @@
               "Effort redirected rather than stalled."
             ],
             "folderLabel": "@HumanitariansAI"
-          },
-          "rendered": {
-            "out": "media/B01.mp4",
-            "at": ""
           }
         }
       },
       "estimated_duration_s": 23,
-      "audio_file": "mp3/beat-B01.mp3",
-      "actual_duration_s": 20.16,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.82,
       "build": {
         "status": "VIDEO",
-        "src": "media/B01.mp4",
+        "src": "media/B02.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T14:54:22"
+        "at": "2026-07-31T22:04:24"
       }
     },
     {
-      "beat_id": "B02",
+      "beat_id": "B03",
       "act": "ADAPTING",
       "narration_text": "Chaining the renders is a small change with a real effect. Instead of supervising each build and starting the next by hand, one command produces the set. When a style change arrives later and everything has to be rebuilt, that difference is what makes rebuilding cheap enough to actually do.",
       "shot": {
@@ -174,27 +223,23 @@
             "title": "batch production",
             "code": "# before — one scene at a time, supervised\nrender ch01 ; wait ; render ch02 ; wait ...\n\n# after — chained, single pass\nrender ch01 && render ch02 && render ch03 && render ch04\n\n# rebuild cost drops → a style pivot stays affordable",
             "sparkLine": "One pass, four chapters."
-          },
-          "rendered": {
-            "out": "media/B02.mp4",
-            "at": ""
           }
         }
       },
       "estimated_duration_s": 22,
-      "audio_file": "mp3/beat-B02.mp3",
+      "audio_file": "mp3/beat-B03.mp3",
       "actual_duration_s": 19.18,
       "build": {
         "status": "VIDEO",
-        "src": "media/B02.mp4",
+        "src": "media/B03.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T14:54:22"
+        "at": "2026-07-31T22:04:24"
       }
     },
     {
-      "beat_id": "B03",
+      "beat_id": "B04",
       "act": "EDITORIAL",
-      "narration_text": "The second decision was subtractive. The original plan covered twelve topics. Varun pruned it to four — the ones that genuinely benefit from animation. That follows the professor's explicit instruction to visualise only what warrants it, and it is the harder call, because cutting eight planned deliverables looks like less work while being the correct one.",
+      "narration_text": "The second decision was subtractive. The original plan covered twelve topics. I pruned it to four — the ones that genuinely benefit from animation. That follows the professor's explicit instruction to visualise only what warrants it, and it is the harder call, because cutting eight planned deliverables looks like less work while being the correct one.",
       "shot": {
         "type": "GRAPHIC",
         "source": "remotion",
@@ -232,27 +277,23 @@
               "Fewer deliverables, deliberately."
             ],
             "folderLabel": "@HumanitariansAI"
-          },
-          "rendered": {
-            "out": "media/B03.mp4",
-            "at": ""
           }
         }
       },
       "estimated_duration_s": 25,
-      "audio_file": "mp3/beat-B03.mp3",
-      "actual_duration_s": 22.46,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 22.32,
       "build": {
         "status": "VIDEO",
-        "src": "media/B03.mp4",
+        "src": "media/B04.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T14:54:22"
+        "at": "2026-07-31T22:04:24"
       }
     },
     {
-      "beat_id": "B04",
+      "beat_id": "B05",
       "act": "DEPENDENCY",
-      "narration_text": "The narration credential is worth restating plainly, because it spans two months. It was diagnosed as an inactive key, reported to the people who administer the account, and never silently absorbed into the schedule. Work continued around it; the dependency itself simply was not Varun's to close.",
+      "narration_text": "The narration credential is worth restating plainly, because it spans two months. It was diagnosed as an inactive key, reported to the people who administer the account, and never silently absorbed into the schedule. Work continued around it; the dependency itself simply was not mine to close.",
       "shot": {
         "type": "GRAPHIC",
         "source": "remotion",
@@ -285,32 +326,28 @@
           "props": {
             "label": "Narration credential",
             "opened": "Reported in month two",
-            "closed": "Outside his control",
+            "closed": "Outside my control",
             "days": 14,
             "resolution": "Diagnosed, reported, and worked around — never silently absorbed.",
             "court": "Account administrator",
             "folderLabel": "@HumanitariansAI"
-          },
-          "rendered": {
-            "out": "media/B04.mp4",
-            "at": ""
           }
         }
       },
       "estimated_duration_s": 22,
-      "audio_file": "mp3/beat-B04.mp3",
-      "actual_duration_s": 20.18,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 19.99,
       "build": {
         "status": "VIDEO",
-        "src": "media/B04.mp4",
+        "src": "media/B05.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T14:54:22"
+        "at": "2026-07-31T22:04:24"
       }
     },
     {
-      "beat_id": "B05",
+      "beat_id": "B06",
       "act": "NEW DIRECTION",
-      "narration_text": "Then the direction changed again. Prof. Nik introduced a new production tool and a distinct visual style — a creative call, not a correction. Varun onboarded onto the tool, scoped what the style shift meant technically, and delivered three sample videos in the new style to Prof. Sridhar for review.",
+      "narration_text": "Then the direction changed again. Prof. Nik introduced a new production tool and a distinct visual style — a creative call, not a correction. I onboarded onto the tool, scoped what the style shift meant technically, and delivered three sample videos in the new style to Prof. Sridhar for review.",
       "shot": {
         "type": "GRAPHIC",
         "source": "remotion",
@@ -348,25 +385,21 @@
               "Three sample videos delivered to Prof. Sridhar for review."
             ],
             "folderLabel": "@HumanitariansAI"
-          },
-          "rendered": {
-            "out": "media/B05.mp4",
-            "at": ""
           }
         }
       },
       "estimated_duration_s": 23,
-      "audio_file": "mp3/beat-B05.mp3",
-      "actual_duration_s": 19.7,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 19.18,
       "build": {
         "status": "VIDEO",
-        "src": "media/B05.mp4",
+        "src": "media/B06.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T14:54:22"
+        "at": "2026-07-31T22:04:24"
       }
     },
     {
-      "beat_id": "B06",
+      "beat_id": "B07",
       "act": "HOURS",
       "narration_text": "Three weeks, twenty hours documented in each. Sixty hours for the month. Status: in compliance.",
       "shot": {
@@ -414,25 +447,21 @@
             "status": "In compliance",
             "caption": "",
             "folderLabel": "@HumanitariansAI"
-          },
-          "rendered": {
-            "out": "media/B06.mp4",
-            "at": ""
           }
         }
       },
       "estimated_duration_s": 9,
-      "audio_file": "mp3/beat-B06.mp3",
+      "audio_file": "mp3/beat-B07.mp3",
       "actual_duration_s": 6.86,
       "build": {
         "status": "VIDEO",
-        "src": "media/B06.mp4",
+        "src": "media/B07.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T14:54:22"
+        "at": "2026-07-31T22:04:24"
       }
     },
     {
-      "beat_id": "B07",
+      "beat_id": "B08",
       "act": "VERDICT",
       "narration_text": "Month three, then. An upstream dependency handled without stalling. Production batched and chained so rebuilds stay cheap. Twelve planned topics cut to the four that warrant animation. A new tool and a new visual language absorbed inside a fortnight. And three samples delivered for review.",
       "shot": {
@@ -465,25 +494,21 @@
               "Twelve planned topics pruned to the four that warrant animation.",
               "A new tool and visual direction absorbed; three samples delivered for review."
             ]
-          },
-          "rendered": {
-            "out": "media/B07.mp4",
-            "at": ""
           }
         }
       },
       "estimated_duration_s": 21,
-      "audio_file": "mp3/beat-B07.mp3",
+      "audio_file": "mp3/beat-B08.mp3",
       "actual_duration_s": 19.63,
       "build": {
         "status": "VIDEO",
-        "src": "media/B07.mp4",
+        "src": "media/B08.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T14:54:22"
+        "at": "2026-07-31T22:04:24"
       }
     },
     {
-      "beat_id": "B08",
+      "beat_id": "B09",
       "act": "OUTRO",
       "narration_text": "Scoped, Then Rebuilt. Medhavy, month three.",
       "shot": {
@@ -511,21 +536,17 @@
             "title": "Scoped, Then Rebuilt.",
             "handle": "@HumanitariansAI",
             "subline": "Medhavy · Month three"
-          },
-          "rendered": {
-            "out": "media/B08.mp4",
-            "at": ""
           }
         }
       },
       "estimated_duration_s": 6,
-      "audio_file": "mp3/beat-B08.mp3",
+      "audio_file": "mp3/beat-B09.mp3",
       "actual_duration_s": 3.02,
       "build": {
         "status": "VIDEO",
-        "src": "media/B08.mp4",
+        "src": "media/B09.mp4",
         "filled_by": "media",
-        "at": "2026-07-31T14:54:22"
+        "at": "2026-07-31T22:04:24"
       }
     }
   ]
